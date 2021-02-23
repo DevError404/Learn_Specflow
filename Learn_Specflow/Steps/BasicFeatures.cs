@@ -7,6 +7,8 @@ using TechTalk.SpecFlow;
 using Learn_Specflow.Hooks;
 using NUnit.Framework;
 using OpenQA.Selenium.Support.UI;
+using Ledger_AutomationTesting.ExcelUtilities;
+using Learn_Specflow.PageObjects;
 
 namespace Learn_Specflow.Steps
 {
@@ -47,6 +49,22 @@ namespace Learn_Specflow.Steps
             Assert.IsTrue(_driver.Title.ToLower().Contains(searchKeyword));
         }
 
+        [Given(@"I navigate to facebook URL")]
+        public void GivenINavigateToFacebookURL()
+        {
+            _driver.Navigate().GoToUrl("https://www.facebook.com");
+        }
+
+        [Then(@"I enter Email and password")]
+        public void ThenIEnterEmailAndPassword()
+        {
+            ExcelLib excel = new ExcelLib();
+            string path = "";
+            excel.PopulateInCollection(path);
+            Facebook fb = new Facebook();
+            //excel.ReadData(1, "Email")
+            fb.EnterCredential(excel.ReadData(1, "Email"), excel.ReadData(1, "Password"));
+        }
 
     }
 }
