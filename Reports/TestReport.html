@@ -43,7 +43,7 @@
         <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 
             <a>
-                <span class='suite-start-time label blue darken-3'>2/22/2021 10:01:35 PM India Standard Time</span>
+                <span class='suite-start-time label blue darken-3'>2/23/2021 11:06:48 PM India Standard Time</span>
             </a>
             <a>
                 <span class="label blue darken-3">3.1.0</span>
@@ -123,10 +123,10 @@
                     <canvas id='parent-analysis' width='100' height='80'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span><span class='strong'>1</span> test(s) passed</span>
+                    <span><span class='strong'>0</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
+                    <span class='strong'>1</span> test(s) failed, <span class='strong'>0</span> others
                 </div>
             </div>
         </div>
@@ -138,10 +138,10 @@
                         <canvas id='child-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>1</span> step(s) passed</span>
+                        <span><span class='strong'>0</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
-                        <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+                        <span class='strong'>1</span> step(s) failed, <span class='strong'>0</span> others
                     </div>
                 </div>
             </div>
@@ -153,10 +153,10 @@
                         <canvas id='grandchild-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>4</span> step(s) passed</span>
+                        <span><span class='strong'>1</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
-                        <span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+                        <span class='strong'>1</span> step(s) failed, <span class='strong'>0</span> others
                     </div>
                 </div>
             </div>
@@ -170,38 +170,31 @@
             <ul id='test-collection' class='test-collection'>
 
 
-                    <li class='test displayed active has-leaf pass' status='pass' bdd='bdd' test-id='1'>
+                    <li class='test displayed active has-leaf fail' status='fail' bdd='bdd' test-id='1'>
                         <div class='test-heading'>
                             <span class='test-name'>BasicFeatures</span>
-                            <span class='test-time'>2/22/2021 10:01:35 PM</span>
-                            <span class='test-status right pass'>Pass</span>
+                            <span class='test-time'>2/23/2021 11:06:48 PM</span>
+                            <span class='test-status right fail'>Fail</span>
                         </div>
                         <div class='test-content hide'>
-                                    <div class='scenario node' test-id='2' status='pass'>
-                                        <span class='scenario-duration right label'>00:00:07.0472892</span>
+                                    <div class='scenario node' test-id='2' status='fail'>
+                                        <span class='scenario-duration right label'>00:04:46.8347633</span>
                                         <div class='scenario-desc'>
                                             <b>Scenario</b>
-                                            Setup
+                                            Example to show how to read data from excel
 
                                             
                                         </div>
                                             <ul class='steps'>
                                                     <li test-id='3' class='node given pass' status='given pass'>
                                                         <b>Given</b>
-                                                        I navigate to the youtube URL
+                                                        I navigate to facebook URL
                                                                                                                                                                     </li>
-                                                    <li test-id='4' class='node given pass' status='given pass'>
-                                                        <b>Given</b>
-                                                        I have entered FRIENDS as search keyword
-                                                                                                                                                                    </li>
-                                                    <li test-id='5' class='node when pass' status='when pass'>
-                                                        <b>When</b>
-                                                        I press the search button
-                                                                                                                                                                    </li>
-                                                    <li test-id='6' class='node then pass' status='then pass'>
+                                                    <li test-id='4' class='node then fail' status='then fail'>
                                                         <b>Then</b>
-                                                        I should navigate to search results page
-                                                                                                                                                                    </li>
+                                                        I enter Email and password
+                                                                                                                                                                            <div class='pre'>Invalid argument.</div>
+                                                    </li>
                                             </ul>
                                     </div>
 
@@ -282,25 +275,25 @@
                 <div class='col s2'>
                     <div class='card-panel r'>
                         Steps
-                        <div class='panel-lead'>4</div>
+                        <div class='panel-lead'>2</div>
                     </div>
                 </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Start
-                    <div class='panel-lead'>2/22/2021 10:01:35 PM</div>
+                    <div class='panel-lead'>2/23/2021 11:06:48 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     End
-                    <div class='panel-lead'>2/22/2021 10:01:46 PM</div>
+                    <div class='panel-lead'>2/23/2021 11:11:49 PM</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Time Taken
-                    <div class='panel-lead'>00:00:10.8590258</div>
+                    <div class='panel-lead'>00:05:01.5870432</div>
                 </div>
             </div>
 
@@ -319,23 +312,23 @@
 
 		<script>
 			var statusGroup = {
-			    passParent: 1,
-			    failParent: 0,
+			    passParent: 0,
+			    failParent: 1,
 			    fatalParent: 0,
 			    errorParent: 0,
 			    warningParent: 0,
 			    skipParent: 0,
 				
-			    passChild: 1,
-			    failChild: 0,
+			    passChild: 0,
+			    failChild: 1,
 			    fatalChild: 0,
 			    errorChild: 0,
 			    warningChild: 0,
 			    skipChild: 0,
 			    infoChild: 0,
 				
-			    passGrandChild: 4,
-			    failGrandChild: 0,
+			    passGrandChild: 1,
+			    failGrandChild: 1,
 			    fatalGrandChild: 0,
 			    errorGrandChild: 0,
 			    warningGrandChild: 0,
